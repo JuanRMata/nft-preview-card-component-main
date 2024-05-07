@@ -1,0 +1,185 @@
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+/* contenedor principal */
+
+.principal {
+  background: var(--very-dark-blue-main-bg, #0d192c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.contenedor {
+  border-radius: 15px;
+  background: var(--very-dark-blue-card-bg, #15263f);
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+  width: 327px;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor {
+    box-shadow: none;
+  }
+}
+
+/* imagen principal */
+
+.img {
+  position: relative; /* Agregamos posición relativa al contenedor de la imagen */
+}
+
+.imagen {
+  width: 278px;
+  height: 278px;
+  border-radius: 8px;
+  display: block;
+}
+
+.nftHover {
+  position: absolute; /* Posición absoluta para superponer el hover */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Cyan, #00fff8); /* Color del hover */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Por defecto, el hover está oculto */
+  transition: opacity 0.15s;
+}
+.nftHover:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.imagen:hover {
+  cursor: pointer;
+  opacity: 0.503;
+  background: var(--Cyan, #00fff8);
+}
+
+/* contenedores iniciales */
+
+.contenedor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-primario {
+  padding: 24px;
+}
+
+/* textos */
+
+.titulo {
+  color: var(--White, #fff);
+  font-size: 22px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.titulo:hover {
+    color: var(--Cyan, #00FFF8);
+    cursor: pointer;
+}
+
+.parrafo {
+  color: var(--Soft-Blue, #8bacd9);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ethereum {
+  color: var(--Cyan, #00fff8);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ethereum,
+.time {
+  display: flex;
+  justify-content: spasce-between;
+  align-items: center;
+}
+
+.et-img {
+  margin-right: 7px;
+}
+
+.time {
+  color: var(--Soft-Blue, #8bacd9);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tm-img {
+  margin-right: 7px;
+}
+
+/* decoracion para la division de la tarjeta */
+
+.info::after {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* contenedor creditos */
+
+.contenedor-creditos {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-creditos::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: var(--very-dark-blue-line, #2e405a);
+}
+
+.creador {
+  color: var(--Soft-Blue, #8bacd9);
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nombre-creador {
+  color: var(--White, #fff);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nombre-creador:hover {
+  color: var(--Cyan, #00fff8);
+  cursor: pointer;
+}
+
+.imagen-creador {
+  width: 33px;
+  height: 33px;
+  border-radius: 33px;
+  border: 1px solid var(--White, #fff);
+  margin-right: 16px;
+}
